@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Todo.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+	<Grid Loaded="Grid_Loaded">
+		<ListView HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="268"
+				  ItemsSource="{Binding Todos}"				  >
+			<ListView.View>
+				<GridView>
+					<GridViewColumn/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+		<TextBox HorizontalAlignment="Left" Height="22" Margin="344,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+		<TextBox HorizontalAlignment="Left" Height="22" Margin="344,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+	</Grid>
 </Window>

@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\FakeDataService.cs" />
+    <Compile Include="Data\ITodoDataService.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Todo.DataAccess\Todo.DataAccess.csproj">
+      <Project>{4024a174-4ee1-4521-a45f-4e9abe0181dd}</Project>
+      <Name>Todo.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Todo.Model\Todo.Model.csproj">
+      <Project>{69bfe9bc-9a90-41e4-8907-be329bcbd0e0}</Project>
+      <Name>Todo.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

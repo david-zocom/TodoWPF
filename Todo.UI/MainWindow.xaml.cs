@@ -20,9 +20,24 @@ namespace Todo.UI
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		public MainWindow()
+		private ViewModel.MainViewModel ViewModel;
+
+		public MainWindow(ViewModel.MainViewModel viewModel)
 		{
 			InitializeComponent();
+			ViewModel = viewModel;
+			DataContext = viewModel;
+			
+		}
+
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			ViewModel.Load();
+		}
+		private void Grid_Loaded(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }
